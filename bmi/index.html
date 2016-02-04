@@ -98,7 +98,7 @@
 
     <hr>
     <footer>
-      <p>&copy; 2016 Mazen!</p>
+      <p style="margin-bottom: 20px;">&copy; 2016 Mazen!</p>
     </footer>
   </div>
   <!-- /container -->
@@ -119,7 +119,28 @@
 </html>
 
 <script type="text/javascript">
+  function fixFooter() {
+    var footer = $("footer");
+    height = footer.height();
+    paddingTop = parseInt(footer.css('padding-top'), 10); //zero if is undefined
+    paddingBottom = parseInt(footer.css('padding-bottom'), 10); //zero if is undefined
+    totalHeight = (height + paddingTop + paddingBottom);
+    footerPosition = footer.position();
+    windowHeight = $(window).height();
+    height = (windowHeight - footerPosition.top) - totalHeight;
+    if (height > 0) {
+      footer.css({
+        'margin-top': (height) + 'px'
+      });
+    }
+  }
+
+  $(window).resize(function() {
+    fixFooter(); //at page resize
+  });
+
   $(document).ready(function() {
+    fixFooter(); //at page load
     $('#calculate').click(function() {
       var x = $('#mySelect').prop('selectedIndex');
       var w = parseFloat($('#weight').val());
