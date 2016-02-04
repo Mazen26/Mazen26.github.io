@@ -68,10 +68,12 @@
     <div class="row">
       <div class="col-md-4">
         <h4>Please select measuring preference</h4>
+        <div class="form-group">
           <select id="mySelect" class="form-control">
             <option>Metric</option>
             <option>imperial</option>
           </select>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -80,8 +82,12 @@
           <div class="form-group">
             <input type="text" id="weight" placeholder="Weight" class="form-control">
           </div>
-          <input type="text" id="height" placeholder="Height" class="form-control">
-          <input type="button" id="calculate" value="Calculate" class="btn btn-default">
+          <div class="form-group">
+            <input type="text" id="height" placeholder="Height" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="button" id="calculate" value="Calculate" class="btn btn-default">
+          </div>
         </form>
         <div class="col-md-6">
           <h4><span id="display_value"></span></h4>
