@@ -9,6 +9,11 @@
   </head>
   <body>
     <form>
+      <select id="mySelect">
+        <option>Metric</option>
+        <option>Imperail</option>
+        </select>
+        <p>Please select measuring preference</p>
       <input type="text" id="weight" placeholder="Weight">
       <input type="text" id="height" placeholder="Height">
       <input type="button" id="calculate" value="Calculate">
@@ -24,10 +29,12 @@
 <script type="text/javascript">
   $(document).ready(function () {
     $('#calculate').click(function () {
+      var x = 1
       var w = parseFloat($('#weight').val());
       var h = parseFloat($('#height').val());
       var person = new Person({weight: w, height: h});
-      person.calculate_bmi_met();
+         if (x == 2)  {person.calculate_bmi_met(); }
+         else {person.calculate_bmi_imp(); }
       $('#display_value').html('Your BMI is ' + person.bmiValue);
       $('#display_message').html('and you are '+ person.bmiMessage);
     });

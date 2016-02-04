@@ -1,7 +1,6 @@
 describe("BMICalculator", function() {
   var bmi_calculator;
   var person;
-  var person_2;
 
   beforeEach(function() {
     person = new Person({weight: 90, height: 186});
