@@ -1,86 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
-    <title>BMI calculator</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <title>BMI calculator</title>
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!--link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"-->
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/jumbotron.css" rel="stylesheet">
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!--link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"-->
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+  <!-- Custom styles for this template -->
+  <link href="css/jumbotron.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="src/person.js"></script>
-    <script src="src/bmi_calculator.js"></script>
-    <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
-  </head>
+  <script src="src/person.js"></script>
+  <script src="src/bmi_calculator.js"></script>
+  <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+</head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">BMI Calculator</a>
-        </div>
-          </form>
-        </div><!--/.navbar-collapse -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#025DCC">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">BMI Calculator</a>
       </div>
-    </nav>
+      </form>
+    </div>
+    <!--/.navbar-collapse -->
+    </div>
+  </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Perfection!</h1>
-        <h2>Check how close you are</h2>
-        <p>BMI " Body Mass Index" is an important parameter for healthy body, this calculator provide your BMI based on both Metric and Imperial measurments!</p>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron" style="background-color:#BAD9FF">
+    <div class="container">
+      <h1>Perfection!</h1>
+      <h2>Check how close you are</h2>
+      <p>BMI " Body Mass Index" is an important parameter for healthy body, this calculator provide your BMI based on both Metric and Imperial measurments!</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Please select measuring preference</h4>
+          <select id="mySelect" class="form-control">
+            <option>Metric</option>
+            <option>imperial</option>
+          </select>
       </div>
     </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h4>Please select measuring preference</h4>
-          <form>
-            <select id="mySelect">
-              <option>Metric</option>
-              <option>imperial</option>
-            </select>
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-         <form>
-          <input type="text" id="weight" placeholder="Weight">
-          <input type="text" id="height" placeholder="Height">
-          <input type="button" id="calculate" value="Calculate">
-         </form>
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <input type="text" id="weight" placeholder="Weight" class="form-control">
+          </div>
+          <input type="text" id="height" placeholder="Height" class="form-control">
+          <input type="button" id="calculate" value="Calculate" class="btn btn-default">
+        </form>
         <div class="col-md-6">
           <h4><span id="display_value"></span></h4>
           <p><span id="display_message"></span></p>
@@ -88,35 +90,46 @@
       </div>
     </div>
 
-      <hr>
-      <footer>
-        <p>&copy;   2016 Mazen!</p>
-      </footer>
-    </div> <!-- /container -->
+    <hr>
+    <footer>
+      <p>&copy; 2016 Mazen!</p>
+    </footer>
+  </div>
+  <!-- /container -->
 
 
-    <!-- Bootstrap core JavaScript
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+  </script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
 </html>
 
 <script type="text/javascript">
-  $(document).ready(function () {
-    $('#calculate').click(function () {
+  $(document).ready(function() {
+    $('#calculate').click(function() {
       var x = $('#mySelect').prop('selectedIndex');
       var w = parseFloat($('#weight').val());
       var h = parseFloat($('#height').val());
-      var person = new Person({weight: w, height: h});
-         if (x == 0)  {person.calculate_bmi_met(); }
-         if (x == 1) {person.calculate_bmi_imp() };
+      var person = new Person({
+        weight: w,
+        height: h
+      });
+      if (x == 0) {
+        person.calculate_bmi_met();
+      }
+      if (x == 1) {
+        person.calculate_bmi_imp()
+      };
       $('#display_value').html('Your BMI is ' + person.bmiValue);
-      $('#display_message').html('and you are '+ person.bmiMessage);
+      $('#display_message').html('and you are ' + person.bmiMessage);
     });
   });
 </script>
